@@ -26,7 +26,7 @@ public class PaypalPayment extends Payment implements Serializable{
     public String printReceipt(){
         String receipt = "Payment received: " + "\n"
                 + "Method: Paypal - " + payPalId + "\n"
-                + "Amount: " + super.getPaymentAmount() + "\n";
+                + "Amount: " + super.getAmount() + "\n";
         return receipt;
     }
 

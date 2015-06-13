@@ -4,6 +4,8 @@ import org.restlet.resource.Delete;
 import org.restlet.resource.Get;
 import org.restlet.resource.Put;
 
+import java.io.UnsupportedEncodingException;
+
 /**
  * Created by Julius Myszkowski on 12/06/2015.
  * Subject: ${subjectCode} - ${subjectTitle}
@@ -16,7 +18,7 @@ import org.restlet.resource.Put;
 
 public interface PaymentResource {
     @Get
-    public Payment retrieve();
+    public Payment retrieve() throws UnsupportedEncodingException;
 
     @Put
     public void store(Payment payment);

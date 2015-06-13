@@ -3,4 +3,12 @@
     <welcome-file-list>
         <welcome-file>login.jsp</welcome-file>
     </welcome-file-list>
+    <servlet>
+        <servlet-name>MakePayment</servlet-name>
+        <servlet-class>au.edu.newcastle.seng4400.c3155112.RESTServer.MakePayment</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>MakePayment</servlet-name>
+        <url-pattern>/MakePayment</url-pattern>
+    </servlet-mapping>
 </web-app>

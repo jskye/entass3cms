@@ -9,15 +9,43 @@ package au.edu.newcastle.seng4400.c3155112.RESTServer;
  */
 public class Payment {
 
-    private double paymentAmount;
 
-    public Payment(){}
+    private String id;
+    private String type;
+    private Double amount;
 
-    public double getPaymentAmount() {
-        return paymentAmount;
+    // constr
+    public Payment() {
     }
 
-    public void setPaymentAmount(double paymentAmount) {
-        this.paymentAmount = paymentAmount;
+
+    // getters/setters
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public Double getAmount() {
+        return amount;
+    }
+
+    public void setAmount(Double amount) {
+        this.amount = amount;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
+    @Override
+    public String toString()
+    {
+        return "type="+type+"&id="+id+"&amount="+String.valueOf(amount);
     }
 }

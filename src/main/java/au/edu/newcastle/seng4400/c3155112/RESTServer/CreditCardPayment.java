@@ -26,7 +26,7 @@ public class CreditCardPayment extends Payment implements Serializable{
     public String printReceipt(){
         String receipt = "Payment received: " + "\n"
                 + "Method: Paypal - " + creditCardNumber + "\n"
-                + "Amount: " + super.getPaymentAmount() + "\n";
+                + "Amount: " + super.getAmount() + "\n";
         return receipt;
     }
 
