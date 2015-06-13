@@ -64,12 +64,31 @@
             <artifactId>org.restlet.ext.xml</artifactId>
             <version>2.3.2</version>
         </dependency>
+        <!-- dependency for gae restlet json support jar -->
+        <dependency>
+            <groupId>org.restlet.gae</groupId>
+            <artifactId>org.restlet.ext.json</artifactId>
+            <version>2.3.2</version>
+        </dependency>
         <!-- dependency for gae restlet gae deployment support jar -->
         <dependency>
             <groupId>org.restlet.gae</groupId>
             <artifactId>org.restlet.ext.gae</artifactId>
             <version>2.3.2</version>
         </dependency>
+        <!-- dependency for restlet servlet jar -->
+        <dependency>
+            <groupId>org.restlet.gae</groupId>
+            <artifactId>org.restlet.ext.servlet</artifactId>
+            <version>2.3.2</version>
+        </dependency>
+        <!-- dependency for restlet jackson jar -->
+        <dependency>
+            <groupId>org.restlet.gae</groupId>
+            <artifactId>org.restlet.ext.jackson</artifactId>
+            <version>2.3.2</version>
+        </dependency>
+
 
         <!-- Test Dependencies -->
         <dependency>
@@ -138,8 +157,8 @@
                     <enableJarClasses>false</enableJarClasses>
                     <version>${app.version}</version>
                     <!-- Comment in the below snippet to bind to all IPs instead of just localhost -->
-                    <!-- address>0.0.0.0</address>
-                    <port>8080</port -->
+                    <!-- address>0.0.0.0</address>-->
+                    <port>8081</port>
                     <!-- Comment in the below snippet to enable local debugging with a remote debugger
                          like those included with Eclipse or IntelliJ -->
                     <!-- jvmFlags>

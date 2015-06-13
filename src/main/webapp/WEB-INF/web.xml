@@ -11,4 +11,16 @@
         <servlet-name>MakePayment</servlet-name>
         <url-pattern>/MakePayment</url-pattern>
     </servlet-mapping>
+    <servlet>
+        <servlet-name>RestletServlet</servlet-name>
+        <servlet-class>org.restlet.ext.servlet.ServerServlet</servlet-class>
+        <init-param>
+            <param-name>org.restlet.application</param-name>
+            <param-value>au.edu.newcastle.seng4400.c3155112.RESTServer.ServerApplication</param-value>
+        </init-param>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>RestletServlet</servlet-name>
+        <url-pattern>/poll_payment</url-pattern>
+    </servlet-mapping>
 </web-app>

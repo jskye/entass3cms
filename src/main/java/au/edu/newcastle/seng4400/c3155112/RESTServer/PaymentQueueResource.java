@@ -19,14 +19,17 @@ import java.util.concurrent.TimeUnit;
 public class PaymentQueueResource extends ServerResource implements PaymentResource{
 
     // gets/retrieves a payment from the task queue
-    @Get
+    @Get("JSON")
+//    @Get
+//    public JacksonRepresentation<Payment> retrieve() throws UnsupportedEncodingException, UnsupportedOperationException {
     public Payment retrieve() throws UnsupportedEncodingException, UnsupportedOperationException {
-
         //get the queue
         Queue q = QueueFactory.getQueue("pull-queue");
 
         // get a 100 millisecond lease on the next task in the queue
         List<TaskHandle> tasks = q.leaseTasks(100, TimeUnit.MILLISECONDS,1);
+
+        Payment payment =null;
 
         if(!tasks.isEmpty())
         {
@@ -34,24 +37,26 @@ public class PaymentQueueResource extends ServerResource implements PaymentResou
             List<java.util.Map.Entry<java.lang.String,java.lang.String>> list = tasks.get(0).extractParams();
 
             //make a new payment object with the above parameters
-            Payment payment = new Payment();
+            payment = new Payment();
 //            payment.setAmount(500);
-//            payment.setId(list.get(1).getValue().toString());
-//            payment.setType(list.get(0).getValue().toString());
             payment.setId(list.get(0).getValue().toString());
+            payment.setType(list.get(1).getValue().toString());
+            payment.setAmount(Double.valueOf(list.get(2).getValue().toString()));
+
+            System.out.println("Retrieving Payment: ");
+            System.out.println(payment.toString());
 
             //delete the task from the queue
             q.deleteTask(tasks.get(0));
             //send to the client
-            return payment;
         }
-        return null;
+        return payment;
+//        return new JacksonRepresentation<Payment>(payment);
     }
 
     // puts/stores a payment on the task queue
     @Put
-    public void store(Payment payment)
-    {
+    public void store(Payment payment) {
         Queue q = QueueFactory.getQueue("pull-queue");
         q.add(TaskOptions.Builder.withMethod(TaskOptions.Method.PULL).payload(payment.toString()));
 
@@ -63,7 +68,7 @@ public class PaymentQueueResource extends ServerResource implements PaymentResou
     }
 
     // returns approximate num of uncompleted tasks on queue.
-    public int size(){
+    public int size() {
         Queue q = QueueFactory.getQueue("pull-queue");
         // get Queue stats
         QueueStatistics qStat = q.fetchStatistics();

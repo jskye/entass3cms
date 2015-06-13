@@ -40,6 +40,7 @@ public class MakePayment extends HttpServlet
             // create payment queue resource
             PaymentQueueResource serverPayRes = new PaymentQueueResource();
             //store the payment on the queue resource
+
             serverPayRes.store(payment);
 
             PrintWriter out = response.getWriter();
