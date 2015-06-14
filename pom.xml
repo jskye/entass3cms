@@ -83,11 +83,11 @@
             <version>2.3.2</version>
         </dependency>
         <!-- dependency for restlet jackson jar -->
-        <dependency>
-            <groupId>org.restlet.gae</groupId>
-            <artifactId>org.restlet.ext.jackson</artifactId>
-            <version>2.3.2</version>
-        </dependency>
+        <!--<dependency>-->
+            <!--<groupId>org.restlet.gae</groupId>-->
+            <!--<artifactId>org.restlet.ext.jackson</artifactId>-->
+            <!--<version>2.3.2</version>-->
+        <!--</dependency>-->
 
 
         <!-- Test Dependencies -->

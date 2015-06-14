@@ -16,20 +16,6 @@
           <element id="library" level="project" name="Maven: org.restlet.gae:org.restlet.lib.org.json:2.0" />
           <element id="library" level="project" name="Maven: org.restlet.gae:org.restlet.ext.gae:2.3.2" />
           <element id="library" level="project" name="Maven: org.restlet.gae:org.restlet.ext.servlet:2.3.2" />
-          <element id="library" level="project" name="Maven: org.restlet.gae:org.restlet.ext.jackson:2.3.2" />
-          <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-core:2.4.4" />
-          <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-annotations:2.4.4" />
-          <element id="library" level="project" name="Maven: com.fasterxml.jackson.core:jackson-databind:2.4.4" />
-          <element id="library" level="project" name="Maven: com.fasterxml.jackson.dataformat:jackson-dataformat-csv:2.4.4" />
-          <element id="library" level="project" name="Maven: com.fasterxml.jackson.dataformat:jackson-dataformat-smile:2.4.4" />
-          <element id="library" level="project" name="Maven: com.fasterxml.jackson.dataformat:jackson-dataformat-xml:2.4.4" />
-          <element id="library" level="project" name="Maven: com.fasterxml.jackson.module:jackson-module-jaxb-annotations:2.4.4" />
-          <element id="library" level="project" name="Maven: org.codehaus.woodstox:stax2-api:3.1.4" />
-          <element id="library" level="project" name="Maven: com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:2.4.4" />
-          <element id="library" level="project" name="Maven: org.yaml:snakeyaml:1.13" />
-          <element id="library" level="project" name="Maven: com.fasterxml.jackson.module:jackson-module-jsonSchema:2.4.4" />
-          <element id="library" level="project" name="Maven: org.codehaus.woodstox:woodstox-core-asl:4.3.0" />
-          <element id="library" level="project" name="Maven: javax.xml.stream:stax-api:1.0-2" />
         </element>
       </element>
     </root>
